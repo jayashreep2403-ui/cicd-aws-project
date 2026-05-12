@@ -1,9 +1,8 @@
-# CI/CD Pipeline on AWS
+# CI/CD Pipeline on AWS 
 
 Automated deployment pipeline that reduces deployment time by 83% using AWS native services.
 
 ## Architecture
-
 GitHub → CodePipeline → CodeBuild → CodeDeploy → EC2
 
 ## Tech Stack
