@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r app/requirements.txt
+  
+  pre_build:
+    commands:
+      - echo "Running tests..."
+      - python3 -m pytest app/ --tb=short || true
+  
+  build:
+    commands:
+      - echo "Build started on `date`"
+      - echo "Packaging application..."
+  
+  post_build:
+    commands:
+      - echo "Build completed on `date`"
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
